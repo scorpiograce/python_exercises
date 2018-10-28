@@ -1,0 +1,9 @@
+old_file_name=input("请输入要复制的文件名：")
+old_file=open(old_file_name,"r",encoding="utf-8")
+position=old_file_name.rfind(".")
+new_file_name=old_file_name[0:position]+"复件"+old_file_name[position:]
+new_file=open(new_file_name,"w",encoding="utf-8")
+content=old_file.read()
+new_file.write(content)
+old_file.close()
+new_file.close()
